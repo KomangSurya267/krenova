@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ModelAdmin;
+use App\Models\ModelUser;
 
 class Pengguna extends Controller
 {
@@ -75,4 +77,45 @@ class Pengguna extends Controller
     {
         return View('user.krenova_oil');
     }
+
+    public function store(Request $r)
+    {
+        $id = $r->id;
+        $username = $r->username;
+        $email = $r->email;
+        $password = $r->password;
+        $organisasi = $r->organisasi;
+        $name = $r->name;
+        $phone = $r->phone;
+        $sosmed = $r->sosmed;
+        $kategori = $r->kategori;
+        $file = $r->file;
+        $abstrak = $r->abstrak;
+        $latarbelakang = $r->latarbelakang;
+        $tujuan = $r->tujuan;
+
+        try {
+            $inovasi = new ModelAdmin;
+            $inovasi->id = $id;
+            $inovasi->username = $username;
+            $inovasi->email = $email;
+            $inovasi->password = $password;
+            $inovasi->organisasi = $organisasi;
+            $inovasi->name = $name;
+            $inovasi->phone = $phone;
+            $inovasi->sosmed = $sosmed;
+            $inovasi->kategori = $kategori;
+            $inovasi->file = $file;
+            $inovasi->abstrak = $abstrak;
+            $inovasi->latarbelakang = $latarbelakang;
+            $inovasi->tujuan = $tujuan;
+            $inovasi->save();
+
+            $r->session()->flash('msg', "Data dengan inovasi $name berhasil tersimpan");
+            return redirect('/tambah');
+        } catch (throwable $e) {
+            echo $e;
+        }
+    }
+
 }

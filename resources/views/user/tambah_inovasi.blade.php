@@ -8,7 +8,7 @@
         <meta name="keywords" content="material, material design, material design, card style, material template, portfolio, corporate, business, creative, agency">
         <meta name="author" content="trendytheme.net">
 
-        <title>Krenova Kota Semarang</title>
+        <title>Pendaftaran Krenova</title>
 
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/ico/logo.png">
@@ -40,8 +40,9 @@
         <link href="assets/css/style.css" rel="stylesheet">
         <!-- Creative CSS -->
         <link href="assets/css/skins/creative.css" rel="stylesheet">
-        <!-- Form CSS -->
-        <link href="{{ asset('/') }}css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+        <!-- Alert CSS -->
+        <link href="assets/css/shortcodes/alert.css" rel="stylesheet">
+        
 
     </head>
     <body id="top" class="has-header-search">
@@ -71,7 +72,7 @@
                                         
             <div id="materialize-menu" class="menuzord">
             <!--logo start-->
-                <a href="index.html" class="logo-brand">
+                <a href="{{ url('/pengguna') }}" class="logo-brand">
                     <img class="retina" src="assets/img/logo2.png" alt=""/>
                 </a>
             <!--logo end-->  
@@ -81,9 +82,9 @@
               <li><a href="{{ url('/pengguna') }}">Beranda</a></li>
               <li><a href="{{ url('/informasi') }}">Informasi</a>
               </li>
-              <li  class="active"><a href="{{ url('/galeri') }}">Galeri</a>
+              <li><a href="{{ url('/galeri') }}">Galeri</a>
               </li>
-              <li><a href="{{ url('/pendaftaran') }}">Pendaftaran</a></li>
+              <li   class="active"><a href="{{ url('/pendaftaran') }}">Pendaftaran</a></li>
             </ul>
                 <!-- menu end-->
             </div>
@@ -106,34 +107,31 @@
 <!--Content Start-->
 
   <!-- Header container -->
-  <div class="container-fluid d-flex align-items-center">
-    <div class="row">
-      <div class="col-lg-7 col-md-10">
-      </div>
-    </div>
-  </div>
-</div>
+
 <!-- Page content -->
-<div class="container-fluid mt--7">
-  <div class="row">
-    <div class="col-xl-8 order-xl-1">
-      <div class="card bg-secondary shadow">
-        <div class="card-header bg-white border-0">
-          <div class="row align-items-center">
+
+
+
+        <div class="card-header bg-white border-0 ">
+          <br>
+          <br>
+          <div class="row center">
             <div class="col-8">
-              <h2 class="mb-0">Daftar Lomba Krenova 2022</h2>
+              <h2 class="text-uppercase text font-30 mb-30"><b>Form Lomba Krenova</b></h2>
               <br>
-              <h4>Data Akun</h4>
             </div>
           </div>
         </div>
         <div class="card-body">
+          <form method="POST" action="{{ route('pengguna.store') }}">
+            @csrf
           <form>
-            <div class="pl-lg-4">
+            <div class="container">
               <div class="row">
+                <h2 class="text-bold mb-30">Data Akun</h2>
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Username *</label>
+                    <p class="form-control-p" for="input-address">Username *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
                     placeholder="Masukkan Username" name="username" id="username" type="text">
                   </div>
@@ -142,16 +140,16 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Password *</label>
+                    <p class="form-control-p" for="input-address">Password *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
-                    placeholder="Masukkan Password"  name="password" id="password" type="text">
+                    placeholder="Masukkan Password"  name="password" id="password" type="password">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Email *</label>
+                    <p class="form-control-p" for="input-address">Email *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
                     placeholder="Masukkan Email" name="email" id="email" type="text">
                   </div>
@@ -160,12 +158,13 @@
             </div>
             <hr class="my-4" />
             <!-- Address -->
-            <h6 class="heading-small text-muted mb-4">Data Diri</h6>
-            <div class="pl-lg-4">
-            <div class="row">
+            <br>
+            <div class="container">
+              <div class="row">
+                <h2 class="text-bold mb-30">Data Diri</h2>      
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Organisasi/Institusi *</label>
+                    <p class="form-control-p" for="input-address">Organisasi/Institusi *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
                     placeholder="Masukkan Organisasi/Institusi Peserta" name="organisasi" id="organisasi" type="text">
                   </div>
@@ -174,7 +173,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Nama Peserta *</label>
+                    <p class="form-control-p" for="input-address">Nama Peserta *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
                     placeholder="Masukkan Nama Peserta/Ketua Kelompok" name="name" id="name" type="text">
                   </div>
@@ -183,7 +182,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Telepone *</label>
+                    <p class="form-control-p" for="input-address">Telepone *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
                     placeholder="Masukkan nomor Telepon Peserta" name="phone" id="phone" type="text">
                   </div>
@@ -192,7 +191,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                    <label class="form-control-label" for="input-address">Sosial Media *</label>
+                    <p class="form-control-p" for="input-address">Sosial Media *</p>
                     <input id="input-address" class="form-control form-control-alternative" 
                     placeholder="Masukkan Username Sosial Media Peserta" name="sosmed" id="sosmed" type="text">
                   </div>
@@ -201,8 +200,8 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                <label class="form-control-label">Kategori Lomba yang Akan Diikuti *</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                <p class="form-control-p">Kategori Lomba yang Akan Diikuti *</p>
+                  <select class="form-control" name="kategori" id="kategori">
                     <option>-Pilih Kategori Lomba-</option>
                     <option>Pendidikan</option>
                     <option>Kesehatan</option>
@@ -217,14 +216,48 @@
                     <option>Material</option>
                   </select>
               </div>
+            </div>
+              </div>
               <div class="file-upload-wrapper">
-                  <input type="file" id="input-file-now" class="file-upload" />
+                <p class="form-control-p" for="input-address">Upload Proposal Krenova *</p>
+                <input type="file" id="file" name="file" class="file-upload" />
+            </div>
+            <br>
+            <div class="row">
+              <h2 class="text-bold mb-30">Penulisan Proposal</h2>   
+              <div class="col-md-12">
+              <div class="form-group">
+                  <p class="form-control-p" for="input-address">Abstrak *</p>
+                  <textarea id="input-address" class="form-control form-control-alternative" rows="10"
+                  placeholder="Masukkan Abstrak dalam Proposal" name="abstrak" id="abstrak" type="text"></textarea>
+                </div>
+                <div class="form-group">
+                  <p class="form-control-p" for="input-address">Latar Belakang *</p>
+                  <textarea id="input-address" class="form-control form-control-alternative" rows="10"
+                  placeholder="Masukkan Latar Belakang dalam Proposal" name="latarbelakang" id="latarbelakang" type="text"></textarea>
+                </div>
+                <div class="form-group">
+                  <p class="form-control-p" for="input-address">Tujuan *</p>
+                  <textarea id="input-address" class="form-control form-control-alternative" rows="10"
+                  placeholder="Masukkan Tujuan dalam Proposal" name="tujuan" id="tujuan" type="text"></textarea>
+                </div>
               </div>
             </div>
+            <br>
+
             <div class="col-lg-10 col-md-9">
+              <p class="form-control-p red-text">* Pastikan semua data terisi dan benar</p>
+              <br>
             <div class="text-center">
               <button type="submit" class="btn btn-danger my-4">Kembali</button>
-              <button type="submit" class="btn btn-danger my-4">Daftar</button>
+              <button type="submit" class="btn2 btn-danger my-4">DAFTAR</button>
+              <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Terimakasih telah mengikuti krenova! Semoga Sukses!</span>
+                <div class="search-close material-icons">&#xE5CD;>
+                   <span class="fas fa-times"></span>
+                </div>
+             </div>
             </div>
           </form>
         </div>
@@ -232,54 +265,56 @@
     </div>
   </div>
 
+  <br>
+  <br>
 <!--Content End-->
 
 <!------------------------------------------------------CONTENT END-------------------------------------------------------------->
 
 <!--Footer Start-->
-        <footer class="footer footer-one">
-            <div class="primary-footer brand-bg darken-2 banner-1">
-                <div class="container">
-                    <a href="#top" class="page-scroll btn-floating btn-large blue back-top waves-effect waves-light" data-section="#top">
-                    <i class="material-icons">&#xE316;</i>
-                    </a>
+<footer class="footer footer-one">
+  <div class="primary-footer brand-bg darken-2 banner-1">
+      <div class="container">
+          <a href="#top" class="page-scroll btn-floating btn-large blue back-top waves-effect waves-light" data-section="#top">
+          <i class="material-icons">&#xE316;</i>
+          </a>
 
-                    <div class="row-md-3">
-                        <div class="col-md-3 widget clearfix">
-                            <h2 class="white-text"><b>Kontak Kami</b></h2>
-                            <p>Jl. Pemuda No. 148, Kota Semarang, Jawa Tengah 50132</p>
+          <div class="row-md-3">
+              <div class="col-md-3 widget clearfix">
+                  <h2 class="white-text"><b>Kontak Kami</b></h2>
+                  <p>Jl. Pemuda No. 148, Kota Semarang, Jawa Tengah 50132</p>
 
-                            <ul class="social-link tt-animate ltr">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                            </ul>
-                        </div><!-- /.col-md-3 -->
+                  <ul class="social-link tt-animate ltr">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                  </ul>
+              </div><!-- /.col-md-3 -->
 
-                        <div class="col-md-3 widget">
-                            <h2 class="white-text"><b>Link Terkait</b></h2>
-                            <p class="white-text">Portal Besar Ekosistem Inovasi Kota Semarang</p>
-                        </div><!-- /.col-md-3 -->
+              <div class="col-md-3 widget">
+                  <h2 class="white-text"><b>Link Terkait</b></h2>
+                  <p class="white-text">Portal Besar Ekosistem Inovasi Kota Semarang</p>
+              </div><!-- /.col-md-3 -->
 
-                        <div class="col-md-3 widget">
-                        <div class="col-md-5">
-                            <img class="img-responsive" src="assets/img/creative/logo.png" alt="">
-                        </div>
-                        <h2 class="white-text"><b>Bappeda Kota Semarang</b></h2>
-                        </div><!-- /.col-md-3 -->                      
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </div><!-- /.primary-footer -->
-            <div class="secondary-footer brand-bg darken-2 banner-1">
-                <div class="container">
-                <center><span class="white-text">&copy; Semarang Technopark 2022 &nbsp;  | &nbsp;  All Rights Reserved &nbsp;</span></center>
-            </div><!-- /.container -->
-            </div>
-        </footer>
+              <div class="col-md-3 widget">
+              <div class="col-md-5">
+                  <img class="img-responsive" src="assets/img/creative/logo.png" alt="">
+              </div>
+              <h2 class="white-text"><b>Bappeda Kota Semarang</b></h2>
+              </div><!-- /.col-md-3 -->                      
+          </div><!-- /.row -->
+      </div><!-- /.container -->
+  </div><!-- /.primary-footer -->
+  <div class="secondary-footer brand-bg darken-2 banner-1">
+      <div class="container">
+      <center><span class="white-text">&copy; Semarang Technopark 2022 &nbsp;  | &nbsp;  All Rights Reserved &nbsp;</span></center>
+  </div><!-- /.container -->
+  </div>
+</footer>
 <!--Footer End-->
 
 
@@ -380,6 +415,21 @@ if (visible) {
     $(this).off('inview');
 }
 });
+</script>
+<script>
+          $('button').click(function(){
+          $('.alert').addClass("show");
+          $('.alert').removeClass("hide");
+          $('.alert').addClass("showAlert");
+          setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+         });
+         $('.close-btn').click(function(){
+           $('.alert').removeClass("show");
+           $('.alert').addClass("hide");
+         });
 </script>
 
 <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems! The following part can be removed on Server for On Demand Loading) -->

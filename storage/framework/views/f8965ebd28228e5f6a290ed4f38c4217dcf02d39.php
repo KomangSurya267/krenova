@@ -59,11 +59,11 @@
                         <!-- Modal Search Form -->
                         <i class="search-close material-icons">&#xE5CD;</i>
                         <div class="search-form-wrapper">
-                            <form action="#" class="white-form">
-                            <div class="text-center">
-                                <a class="waves-effect waves-light btn red"><i class="material-icons left">&#xE899;</i> LOG OUT</a>
-                            </div>
-                            </form>
+                            <form action="<?php echo e(url('logout')); ?>" class="white-form">
+                                <div class="text-center">
+                                  <a href="<?php echo e(url('logout')); ?>"class="waves-effect waves-light btn red"><i class="material-icons left">&#xE899;</i> LOG OUT</a>
+                                </div>
+                              </form>
                         </div>
                     </div><!-- /.search-wrapper -->
                                                     

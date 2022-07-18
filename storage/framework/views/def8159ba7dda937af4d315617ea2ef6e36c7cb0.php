@@ -1,5 +1,5 @@
-@extends('layout.main')
-@section('isi')
+
+<?php $__env->startSection('isi'); ?>
   <!-- <div class="main-content">
       <div class="container-fluid">
       </div>
@@ -21,77 +21,62 @@
         <div class="col">
           <div class="card shadow">
             <div class="card-header bg-transparent">
-              <h3 class="mb-0">Daftar Inovasi</h3>
+              <h3 class="mb-0">Daftar Data User</h3>
             </div>
             <div class="card-body">
             <div class="text-left">
-                <a href="{{route('admin.create')}}" class="btn btn-sm btn-danger">Tambah Data Inovasi</a>
+                <a href="<?php echo e(route('admin.create')); ?>" class="btn btn-sm btn-danger">Tambah Data User</a>
             </div>
             <br>
             <div class="table-responsive">
-              @if(session('msg'))
+              <?php if(session('msg')): ?>
                      <p>
-                         {{ session('msg') }}
+                         <?php echo e(session('msg')); ?>
+
                      </p>
-                 @endif
+                 <?php endif; ?>
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">No.</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
-                    <th scope="col">Organisasi</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Sosial Media</th>
-                    <th scope="col">Kategori</th>
-                    <th scope="col">File</th>
-                    <th scope="col">Abstrak</th>
-                    <th scope="col">Latar Belakang</th>
-                    <th scope="col">Tujuan</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ( $dataInovasi as $d )
+                <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $d->username }}</td>
-                    <td>{{ $d->email }}</td>
-                    <td>{{ $d->password }}</td>
-                    <td>{{ $d->organisasi }}</td>
-                    <td>{{ $d->name }}</td>
-                    <td>{{ $d->phone }}</td>
-                    <td>{{ $d->sosmed }}</td>
-                    <td>{{ $d->kategori }}</td>
-                    <td>{{ $d->file }}</td>
-                    <td>{{ $d->abstrak }}</td>
-                    <td>{{ $d->latarbelakang }}</td>
-                    <td>{{ $d->tujuan }}</td>
-  
+                  <td><?php echo e($loop->iteration); ?></td>
+                    <td><?php echo e($d->name); ?></td>
+                    <td><?php echo e($d->username); ?></td>
+                    <td><?php echo e($d->email); ?></td>
+                    <td><?php echo e($d->password); ?></td>
+                    <!-- <th scope="row">
+                      <div class="media align-items-center">
+                        <a href="#" class="avatar rounded-circle mr-3">
+                          <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
+                        </a>
+                        <div class="media-body">
+                          <span class="mb-0 text-sm">Argon Design System</span>
+                        </div>
+                      </div>
+                    </th> -->
                     <td class="text-right">
                       <div class="dropdown">
                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="{{route('admin.edit', $d->id)}}">Edit &nbsp<i class="fa fa-pen"></i></a>
-                          <!-- @csrf
-                            @method('DELETE')
-                          <a class="dropdown-item" href="{{ route('admin.destroy', $d->id) }}" method="post"
-                          onsubmit="return hapusData()">Hapus &nbsp<i class="fa fa-trash"></i></a> -->
-                          <form method="POST" action="{{ route('admin.destroy', $d->id) }}" style="display: inline" 
-                          onsubmit="return hapusData()">
-                            @csrf
-                            @method('DELETE')
-                          <button type="submit">Hapus</button>
-                        </form>
+                          <a class="dropdown-item" href="<?php echo e(route('admin.edit', $d->id)); ?>">Edit &nbsp<i class="fa fa-pen"></i></a>
+                          <a class="dropdown-item" href="<?php echo e(route('admin.destroy', $d->id)); ?>">Hapus &nbsp<i class="fa fa-trash"></i></a>
                         </div>
                       </div>
                     </td>
                   </tr>
-                  @endforeach
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
               </table>
             </div>
@@ -152,12 +137,12 @@
     </div>
   </div>
   <!--   Core   -->
-  <script src="{{ asset('/') }}js/plugins/jquery/dist/jquery.min.js"></script>
-  <script src="{{ asset('/') }}js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo e(asset('/')); ?>js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="<?php echo e(asset('/')); ?>js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
-  <script src="{{ asset('/') }}js/plugins/clipboard/dist/clipboard.min.js"></script>
+  <script src="<?php echo e(asset('/')); ?>js/plugins/clipboard/dist/clipboard.min.js"></script>
   <!--   Argon JS   -->
-  <script src="{{ asset('/') }}js/argon-dashboard.min.js?v=1.1.2"></script>
+  <script src="<?php echo e(asset('/')); ?>js/argon-dashboard.min.js?v=1.1.2"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&
@@ -167,4 +152,5 @@
       });
   </script>
 </body>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\CODING\BackEnd\Laravel\krenova-seal\resources\views/admin/data_user.blade.php ENDPATH**/ ?>

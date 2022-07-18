@@ -25,7 +25,7 @@
             </div>
             <div class="card-body">
             <div class="text-left">
-                <a href="" class="btn btn-sm btn-danger">Tambah Data User</a>
+                <a href="{{route('admin.create')}}" class="btn btn-sm btn-danger">Tambah Data User</a>
             </div>
             <br>
             <div class="table-responsive">
@@ -69,8 +69,8 @@
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Edit &nbsp<i class="fa fa-pen"></i></a>
-                          <a class="dropdown-item" href="#">Hapus &nbsp<i class="fa fa-trash"></i></a>
+                          <a class="dropdown-item" href="{{route('admin.edit', $d->id)}}">Edit &nbsp<i class="fa fa-pen"></i></a>
+                          <a class="dropdown-item" href="{{ route('admin.destroy', $d->id) }}">Hapus &nbsp<i class="fa fa-trash"></i></a>
                         </div>
                       </div>
                     </td>

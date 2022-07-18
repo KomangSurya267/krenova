@@ -8,7 +8,7 @@
         <meta name="keywords" content="material, material design, material design, card style, material template, portfolio, corporate, business, creative, agency">
         <meta name="author" content="trendytheme.net">
 
-        <title>Krenova Kota Semarang</title>
+        <title>Informasi Krenova</title>
 
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/ico/logo.png">
@@ -69,7 +69,7 @@
                                                 
                   <div id="materialize-menu" class="menuzord">
                     <!--logo start-->
-                      <a href="index.html" class="logo-brand">
+                      <a href="{{ url('/pengguna') }}" class="logo-brand">
                           <img class="retina" src="assets/img/logo2.png" alt=""/>
                       </a>
                     <!--logo end-->  
@@ -105,9 +105,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-7">
-                        <p>Penghargaan Kreativitas dan Inovasi Masyarakat (KRENOVA) adalah bentuk apresiasi dari Gubernur Jawa Tengah kepada para mitra dan inovator yang secara nyata mendukung dalam memajukan produk inovasi untuk masyarakat luas. Sebagaimana tujuan awal bahwa fasilitasi Penyelenggaraan Lomba Krenova tidak hanya berhenti pada pemberian penghargaan saja, tetapi para pemenang lomba diberikan fasilitasi dan pembinaan, serta pendampingan menuju Perusahaan Pemula Berbasis Teknologi (PPBT), melalui kolaborasi antar lembaga penelitian, Inkubator, Technopark dan Kabupaten / Kota di Jawa Tengah. 
-                        </p>
-                        <p> Para peserta Lomba Krenova juga mendapatkan beberapa fasilitasi lanjutan, antara lain: Pelatihan HKI, Hilirisasi Teknologi, Business Technology Center (BTC), Diseminasi dan Penyertaan Pameran, Layanan Inkubasi serta fasilitasi dalam program Perusahaan Pemula Berbasis Teknologi (PPBT) dari Kemenristekdikti. Dalam upaya meningkatkan kreativitas di bidang inovasi masyarakat perlu didorong untuk dapat menciptakan, merekayasa alat/produk yang dapat bermanfaat bagi masyarakat melalui lomba Krenova. Oleh karena itu, masyarakat perlu dipacu agar secara nyata dapat lebih kreatif dan inovatif, sehingga berkontribusi secara nyata bagi peningkatan kesejahteraan masyarakat Jawa Tengah.
+                        <p> Penghargaan Kreativitas dan Inovasi Masyarakat (KRENOVA) adalah bentuk apresiasi dari Gubernur Jawa Tengah kepada para mitra dan inovator yang secara nyata mendukung dalam memajukan produk inovasi untuk masyarakat luas. Lomba Krenova Kota Semarang yang secara rutin
+                          diselenggarakan setiap tahun merupakan suatu ajang guna mengakomodir
+                          semangat berkreasi dan berinovasi dari masyarakat Kota Semarang melalui
+                          kegiatan penelitian, pengembangan dan penerapan teknologi. Pemenang Lomba Krenova Kota Semarang Tahun 2022 akan diajukan sebagai
+                          calon peserta Lomba Krenova Provinsi Jawa Tengah dan pendampingan start up
+                          (pengusaha pemula).                       
                         </p>
                     </div>
                     <div class="col-md-5">

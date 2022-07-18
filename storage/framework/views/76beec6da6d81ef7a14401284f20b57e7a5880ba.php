@@ -8,7 +8,7 @@
         <meta name="keywords" content="material, material design, material design, card style, material template, portfolio, corporate, business, creative, agency">
         <meta name="author" content="trendytheme.net">
 
-        <title>Krenova Kota Semarang</title>
+        <title>Galeri Krenova</title>
 
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/ico/logo.png">
@@ -59,17 +59,17 @@
                         <!-- Modal Search Form -->
                         <i class="search-close material-icons">&#xE5CD;</i>
                         <div class="search-form-wrapper">
-                            <form action="#" class="white-form">
-                            <div class="text-center">
-                                <a class="waves-effect waves-light btn red"><i class="material-icons left">&#xE899;</i> LOG OUT</a>
-                            </div>
-                            </form>
+                            <form action="<?php echo e(url('logout')); ?>" class="white-form">
+                                <div class="text-center">
+                                  <a href="<?php echo e(url('logout')); ?>"class="waves-effect waves-light btn red"><i class="material-icons left">&#xE899;</i> LOG OUT</a>
+                                </div>
+                              </form>
                         </div>
                     </div><!-- /.search-wrapper -->
                                                     
                         <div id="materialize-menu" class="menuzord">
                         <!--logo start-->
-                            <a href="index.html" class="logo-brand">
+                            <a href="<?php echo e(url('/pengguna')); ?>" class="logo-brand">
                                 <img class="retina" src="assets/img/logo2.png" alt=""/>
                             </a>
                         <!--logo end-->  

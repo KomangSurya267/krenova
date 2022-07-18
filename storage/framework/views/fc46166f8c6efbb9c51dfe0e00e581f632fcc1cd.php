@@ -48,6 +48,9 @@
                     <th scope="col">Sosial Media</th>
                     <th scope="col">Kategori</th>
                     <th scope="col">File</th>
+                    <th scope="col">Abstrak</th>
+                    <th scope="col">Latar Belakang</th>
+                    <th scope="col">Tujuan</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -64,16 +67,10 @@
                     <td><?php echo e($d->sosmed); ?></td>
                     <td><?php echo e($d->kategori); ?></td>
                     <td><?php echo e($d->file); ?></td>
-                    <!-- <th scope="row">
-                      <div class="media align-items-center">
-                        <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
-                        </a>
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">Argon Design System</span>
-                        </div>
-                      </div>
-                    </th> -->
+                    <td><?php echo e($d->abstrak); ?></td>
+                    <td><?php echo e($d->latarbelakang); ?></td>
+                    <td><?php echo e($d->tujuan); ?></td>
+  
                     <td class="text-right">
                       <div class="dropdown">
                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

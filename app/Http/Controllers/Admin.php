@@ -49,6 +49,9 @@ class Admin extends Controller
         $sosmed = $r->sosmed;
         $kategori = $r->kategori;
         $file = $r->file;
+        $abstrak = $r->abstrak;
+        $latarbelakang = $r->latarbelakang;
+        $tujuan = $r->tujuan;
 
         try {
             $inovasi = new ModelAdmin;
@@ -62,6 +65,9 @@ class Admin extends Controller
             $inovasi->sosmed = $sosmed;
             $inovasi->kategori = $kategori;
             $inovasi->file = $file;
+            $inovasi->abstrak = $abstrak;
+            $inovasi->latarbelakang = $latarbelakang;
+            $inovasi->tujuan = $tujuan;
             $inovasi->save();
 
             $r->session()->flash('msg', "Data dengan inovasi $name berhasil tersimpan");
@@ -101,7 +107,10 @@ class Admin extends Controller
             'phone' => $inovasi->phone,
             'sosmed' => $inovasi->sosmed,
             'kategori' => $inovasi->kategori,
-            'file' => $inovasi->file
+            'file' => $inovasi->file,
+            'abstrak' => $inovasi->abstrak,
+            'latarbelakang' => $inovasi->latarbelakang,
+            'tujuan' => $inovasi->tujuan
         ];
         
         return View('admin.edit_inovasi', compact('inovasi'));
@@ -127,6 +136,9 @@ class Admin extends Controller
         $sosmed = $r->sosmed;
         $kategori = $r->kategori;
         $file = $r->file;
+        $abstrak = $r->abstrak;
+        $latarbelakang = $r->latarbelakang;
+        $tujuan = $r->tujuan;
 
         try {
             $inovasi = ModelAdmin::find($id);
@@ -139,6 +151,9 @@ class Admin extends Controller
             $inovasi->sosmed = $sosmed;
             $inovasi->kategori = $kategori;
             $inovasi->file = $file;
+            $inovasi->abstrak = $abstrak;
+            $inovasi->latarbelakang = $latarbelakang;
+            $inovasi->tujuan = $tujuan;
             // dd($inovasi);
             $inovasi->update();
 

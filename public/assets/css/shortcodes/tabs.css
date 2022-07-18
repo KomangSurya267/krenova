@@ -347,7 +347,7 @@ Vertical Tab
     color: #fff;
     margin-right: 0;
     border: 0;
-    background: #8B1A10;
+    background: #d2cac9;
     text-align: center;
     font-weight: 700;
 }
@@ -355,7 +355,7 @@ Vertical Tab
 .vertical-tab .nav-tabs>li.active>a, 
 .vertical-tab .nav-tabs>li.active>a:focus, 
 .vertical-tab .nav-tabs>li.active>a:hover {
-    background-color: #ed145b;
+    background-color: #aa1106;
     color: #fff;
     border: 0;
     z-index: 10;

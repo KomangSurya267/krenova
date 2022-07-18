@@ -152,10 +152,22 @@ hr {
     padding: 12px 20px;
     font-size: 16px;
     line-height: 26px;
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: #C80000; /*brand primary color*/
-    border: 0;
+    border: 10px;
 }
+
+.btn2 {
+    height: 50px;
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 26px;
+    border-radius: 10px;
+    background-color: #00c80a; /*brand primary color*/
+    border: 10px;
+}
+
+
 
 .btn-lg {
     padding: 12px 38px;
@@ -171,7 +183,7 @@ hr {
 }
 
 .btn:hover{
-    background-color: #03a9f4;
+    background-color: rgb(185, 188, 190);
 }
 
 .btn.active, 
@@ -2044,7 +2056,7 @@ KEY FRAME
 }
 
 .search-trigger i {
-    font-size: 18px;
+    font-size: 32px;
     line-height: 102px;
     color: #fff9f9;
     position: absolute;

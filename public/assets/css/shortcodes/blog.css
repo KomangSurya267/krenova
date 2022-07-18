@@ -831,13 +831,13 @@ Latest News Card Style
 .b-info .btn{
     padding: 11px 22px;
     box-shadow: none;
-    color: #101010;
+    color: #8b8484;
     background-color: transparent;
     border: 1px solid #e8e8e8;
 }
 .b-info .btn:hover,
 .b-info .btn:focus {
-    background-color: #03a9f4;
+    background-color: #9a9fa2;
     border: 1px solid transparent;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }

@@ -8,7 +8,7 @@
         <meta name="keywords" content="material, material design, material design, card style, material template, portfolio, corporate, business, creative, agency">
         <meta name="author" content="trendytheme.net">
 
-        <title>Krenova Kota Semarang</title>
+        <title>Pendaftaran Krenova</title>
 
         <!--  favicon -->
         <link rel="shortcut icon" href="assets/img/ico/logo.png">
@@ -68,7 +68,7 @@
                                                 
                     <div id="materialize-menu" class="menuzord">
                     <!--logo start-->
-                        <a href="index.html" class="logo-brand">
+                        <a href="{{ url('/pengguna') }}" class="logo-brand">
                             <img class="retina" src="assets/img/logo2.png" alt=""/>
                         </a>
                     <!--logo end-->  
@@ -111,8 +111,8 @@
                     <!-- Nav tabs -->
                     <div class="text-center">
                         <ul class="nav nav-pills" role="tablist">
-                        <li role="presentation"><a href="#icontab-1" class="waves-effect waves-light"  role="tab" data-toggle="tab"> <i class="material-icons">&#xE7FD;</i></a></li>
-                        <li role="presentation" class="active"><a href="#icontab-2" class="waves-effect waves-light" role="tab" data-toggle="tab"> <i class="material-icons">&#xe2c4;</i></a></li>
+                        <li role="presentation" class="active"><a href="#icontab-1" class="waves-effect waves-light"  role="tab" data-toggle="tab"> <i class="material-icons">&#xE7FD;</i></a></li>
+                        <li role="presentation"><a href="#icontab-2" class="waves-effect waves-light" role="tab" data-toggle="tab"> <i class="material-icons">&#xe2c4;</i></a></li>
                         <li role="presentation"><a href="#icontab-3" class="waves-effect waves-light" role="tab" data-toggle="tab"> <i class="material-icons">&#xe873;</i></a></li>
                         <li role="presentation"><a href="#icontab-4" class="waves-effect waves-light" role="tab" data-toggle="tab"> <i class="material-icons">&#xe22b;</i></a></li>
                         <li role="presentation"><a href="#icontab-5" class="waves-effect waves-light" role="tab" data-toggle="tab"> <i class="material-icons">&#xe7f4;</i></a></li>
@@ -203,12 +203,42 @@
         </section>
 <!--Alur End-->
 
+<!--Sistematika Start-->
+<section class="padding-top-100 gray-bg">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-6 pl-100">
+          <h2 class="text-bold mb-30">Sistematika Penulisan Proposal</h2>
+
+          <p> Proposal atau profil temuan/inovasi ditulis </br> <strong>maksimal 20 halaman, ukuran kertas A4, huruf tahoma 12, dilampiri gambar sesuai kebutuhan</strong>, dengan sistematika penulisan sebagai berikut :</br>
+            1)	Halaman Judul</br>
+            2)	Abstrak</br>
+            3)	Latar Belakang</br>
+            4)	Tujuan</br>
+            5)	Manfaat</br>
+            6)	Metode/ model/ spesifikasi teknis</br>
+            7)	Keunggulan bila dibandingkan dengan penemuan yang terdahulu</br>
+            8)	Penerapan pada masyarakat dan dunia industri (lampirkan bukti/testimoni bila ada)</br>
+            9)	Prospek bisnis (potensi pasar,perhitungan biaya produksi,dan harga jual)</p>
+
+        </div><!-- /.col-md-6 -->
+
+        <div class="col-md-6 mocup-wrapper-sm">
+          <img src="assets/img/mockup/dashboard-screen.png" alt="">
+        </div><!-- /.col-md-6 -->
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<!--Sistematika End-->
+
 <!--Dokumen Start-->
         <section class="section-padding gray-bg">
             <div class="container">
 
             <div class="text-center mb-80">
-                <h2 class="text-uppercase text font-30 mb-30"><b>Dokumen Panduan</b></h2>
+                <h2 class="text-uppercase text font-30 mb-30"><b>Dokumen Krenova</b></h2>
             </div>
 
             <div class="row center">
@@ -228,7 +258,7 @@
                             </div><!-- /.table-info -->
                             <div class="table-footer">
                                 <div class="purchase-button">
-                                    <a class="btn btn-lg text-capitalize" href="assets/berkas/Berkas Panduan.pdf">Download</a>
+                                    <p class="btn btn-lg text-capitalize" href="assets/berkas/Berkas Panduan.pdf">Download</p>
                                 </div>   
                             </div> <!-- /.table-footer -->
                         </div> <!-- /.table-contents -->
@@ -291,7 +321,7 @@
                             <div role="tabpanel" class="tab-pane fade in active" id="tab-5">
                                 <h2>Penyiapan Panduan Krenova</h2>
 
-                                <img class="alignright" src="assets/img/working_man.png" alt="">
+                                <img class="alignright" src="assets/img/workingman.png" alt="">
 
                                 <p>
                                     Pembangunan ekosistem riset dan inovasi menjadi fokus Pemerintah dan
@@ -307,7 +337,7 @@
                             <div role="tabpanel" class="tab-pane fade" id="tab-6">
                                 <h2>Sosisalisasi dan Distribusi Panduan Krenova </h2>
 
-                                <img class="alignright" src="assets/img/busy_man.png" alt="">
+                                <img class="alignright" src="assets/img/sosialisasi.png" alt="">
 
                                 <p>Dalam upaya mengembangkan sikap kreatif dan inovatif di tengah
                                     masyarakat, Pemerintah Kota Semarang melalui Badan Perencanaan
@@ -321,7 +351,7 @@
                             <div role="tabpanel" class="tab-pane fade" id="tab-7">
                                 <h2>Pengumpulan Berkas Persyaratan Krenova</h2>
 
-                                <img class="alignright" src="assets/img/mission.png" alt="">
+                                <img class="alignright" src="assets/img/pengumpulan.jpg" alt="">
 
                                 <p>Keterangan/informasi lebih lanjut dapat menghubungi : Bidang Litbang Bappeda
                                     Kota Semarang, Gedung Moch. Ichsan Lantai VII, Jl. Pemuda No. 148 Semarang.
@@ -336,7 +366,7 @@
                             <div role="tabpanel" class="tab-pane fade" id="tab-8">
                                 <h2>Proses Seleksi Produk Krenova</h2>
 
-                                <img class="alignright" src="assets/img/business.png" alt="">
+                                <img class="alignright" src="assets/img/teamwork.png" alt="">
 
                                 <p>Penilaian Administrasi
                                     Proposal yang masuk akan diseleksi dalam kelengkapan profil temuan dan
@@ -350,7 +380,7 @@
                             <div role="tabpanel" class="tab-pane fade" id="tab-9">
                                 <h2>Pengumuman Pemenang Krenova</h2>
                                 
-                                <img class="alignright mt-20" src="assets/img/data.png" alt="">
+                                <img class="alignright mt-20" src="assets/img/pengumuman.jpg" alt="">
 
                                 <p>Pemenang Lomba Krenova dari masing-masing kategori adalah sebanyak 3
                                     (tiga) pemenang, akan mendapatkan piagam penghargaan, piala dan uang

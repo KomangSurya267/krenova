@@ -69,8 +69,8 @@
                                                   
                     <div id="materialize-menu" class="menuzord">
                       <!--logo start-->
-                        <a href="index.html" class="logo-brand">
-                            <img class="retina" src="assets/img/logo2.png" alt=""/>
+                        <a href="<?php echo e(url('/pengguna')); ?>" class="logo-brand">
+                            <img class="retina" src="assets/img/logo2.png"  alt=""/>
                         </a>
                       <!--logo end-->  
                       
